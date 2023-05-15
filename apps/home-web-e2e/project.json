@@ -1,19 +1,19 @@
 {
-  "name": "nx16next-e2e",
+  "name": "home-web-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nx16next-e2e/src",
+  "sourceRoot": "apps/home-web-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/nx16next-e2e/cypress.config.ts",
-        "devServerTarget": "nx16next:serve:development",
+        "cypressConfig": "apps/home-web-e2e/cypress.config.ts",
+        "devServerTarget": "home-web:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "nx16next:serve:production"
+          "devServerTarget": "home-web:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/nx16next-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/home-web-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["nx16next"]
+  "implicitDependencies": ["home-web"]
 }

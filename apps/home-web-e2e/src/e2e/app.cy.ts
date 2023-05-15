@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('nx16next', () => {
+describe('home-web', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('nx16next', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome nx16next');
+    getGreeting().contains('Welcome home-web');
   });
 });
